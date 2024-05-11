@@ -45,13 +45,13 @@ reddit_tifu_dataset = RedditTIFUDataset(reddit_tifu)
 batch_size = 32
 reddit_tifu_loader = DataLoader(reddit_tifu_dataset, batch_size=batch_size, shuffle=True, num_workers=2)
 
-# Answer 1) In order to plot the class-distribution for the reddit_tifu dataset, we must use Pandas DataFrame: 
-# 1.  Store the data with an appropriate dataset handler.
-# 2. Import the required libraries: matplotlib.pyplot and wordcloud.
-# 3. Combine all documents in the reddit_tifu_df DataFrame into a single string using the join() method.
-# 4. Create a WordCloud object with a width of 800 pixels, height of 400 pixels, and a random state of 42. Generate the word cloud using the generate() method and pass the combined string as an argument.
-# 5. Create a new figure with a size of 10x5 inches using plt.figure().
-# Display the word cloud using plt.imshow() and set the interpolation to 'bilinear'. 
+''' Answer 1) In order to plot the class-distribution for the reddit_tifu dataset, we must use Pandas DataFrame: 
+  1.  Store the data with an appropriate dataset handler.
+  2. Import the required libraries: matplotlib.pyplot and wordcloud.
+  3. Combine all documents in the reddit_tifu_df DataFrame into a single string using the join() method.
+  4. Create a WordCloud object with a width of 800 pixels, height of 400 pixels, and a random state of 42. Generate the word cloud using the generate() method and pass the combined string as an argument.
+  5. Create a new figure with a size of 10x5 inches using plt.figure().
+  Display the word cloud using plt.imshow() and set the interpolation to 'bilinear'. '''
 
 # Storing the dataset in a Pandas DataFrame: 
 import pandas as pd
@@ -182,10 +182,10 @@ plt.title('Distribution of Upvote Ratios')
 plt.grid(True)
 plt.show()
 
-# This code first calculates the upvote ratio for each post by dividing the number of upvotes by the total number of votes (upvotes + downvotes). It then converts the 'upvote_ratio' column to a 1D NumPy array. Finally, it creates a histogram to show the distribution of upvote ratios for all posts in the dataset.
+''' This code first calculates the upvote ratio for each post by dividing the number of upvotes by the total number of votes (upvotes + downvotes). It then converts the 'upvote_ratio' column to a 1D NumPy array. Finally, it creates a histogram to show the distribution of upvote ratios for all posts in the dataset. 
 
-# The upvote ratio can be a useful metric for determining the popularity or controversiality of a post. A high upvote ratio indicates that a post has received a large number of upvotes relative to the number of downvotes, suggesting that it is well-liked by the community. On the other hand, a low upvote ratio indicates that a post has received a large number of downvotes relative to the number of upvotes, suggesting that it is controversial or unpopular.
+The upvote ratio can be a useful metric for determining the popularity or controversiality of a post. A high upvote ratio indicates that a post has received a large number of upvotes relative to the number of downvotes, suggesting that it is well-liked by the community. On the other hand, a low upvote ratio indicates that a post has received a large number of downvotes relative to the number of upvotes, suggesting that it is controversial or unpopular.
 
-# The upvote ratio can also be used as a quantitative way of determining categorical correlation within a dataset. For example, suppose you wanted to determine whether there is a correlation between the length of a post and its upvote ratio. You could calculate the upvote ratio for each post, and then group the posts by length (e.g. short, medium, long). You could then compare the average upvote ratio for each group using a statistical test such as ANOVA or a t-test. If there is a significant difference in the average upvote ratio between the groups, this would suggest that there is a correlation between the length of a post and its upvote ratio.
+The upvote ratio can also be used as a quantitative way of determining categorical correlation within a dataset. For example, suppose you wanted to determine whether there is a correlation between the length of a post and its upvote ratio. You could calculate the upvote ratio for each post, and then group the posts by length (e.g. short, medium, long). You could then compare the average upvote ratio for each group using a statistical test such as ANOVA or a t-test. If there is a significant difference in the average upvote ratio between the groups, this would suggest that there is a correlation between the length of a post and its upvote ratio.
 
-# Another example of a quantitative metric that can be used to determine categorical correlation is the F1 score. The F1 score is a measure of the accuracy of a binary classifier, and is calculated as the harmonic mean of the precision and recall. It can be used to evaluate the performance of a classifier that predicts whether a post belongs to a certain category (e.g. spam, not spam). For example, suppose you wanted to determine whether there is a correlation between the length of a post and its likelihood of being spam. You could train a binary classifier to predict whether a post is spam based on its length, and then evaluate the performance of the classifier using the F1 score. If the F1 score is high, this would suggest that there is a correlation between the length of a post and its likelihood of being spam (as spam posts generally tend to receive a lot more downvotes too, resulting in a lower upvote ratio).
+Another example of a quantitative metric that can be used to determine categorical correlation is the F1 score. The F1 score is a measure of the accuracy of a binary classifier, and is calculated as the harmonic mean of the precision and recall. It can be used to evaluate the performance of a classifier that predicts whether a post belongs to a certain category (e.g. spam, not spam). For example, suppose you wanted to determine whether there is a correlation between the length of a post and its likelihood of being spam. You could train a binary classifier to predict whether a post is spam based on its length, and then evaluate the performance of the classifier using the F1 score. If the F1 score is high, this would suggest that there is a correlation between the length of a post and its likelihood of being spam (as spam posts generally tend to receive a lot more downvotes too, resulting in a lower upvote ratio). '''
